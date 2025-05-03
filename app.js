@@ -13,9 +13,5 @@ app.set("view engine", "ejs");
 
 app.use("/",indexRouter);
 app.use("/new",newMessageRouter);
-
-
-
-
 const PORT = 3000;
 app.listen(PORT,()=> console.log("listening"))

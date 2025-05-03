@@ -1,6 +1,5 @@
 const {Router} = require("express");
 const indexRouter = Router();
-
 const messages = require("../data/db")
 
 
@@ -22,4 +21,6 @@ const messages = require("../data/db")
 
   res.render("message", { title: "Message Detail", message });
   });
+
+
 module.exports = indexRouter;
