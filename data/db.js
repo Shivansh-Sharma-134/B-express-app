@@ -1,16 +1,16 @@
-const messages = [
+const users = [
     {
-      text: "Hi there!",
-      user: "Amando",
+      firstName: "Hi there!",
+      lastName: "Amando",
       added: new Date(),
-      messageId: "1"
+      userId: "1"
     },
     {
-      text: "Hello World!",
-      user: "Charles",
+      firstName: "Hello World!",
+      lastName: "Charles",
       added: new Date(),
-      messageId: "2"
+      userId: "2"
     }
   ];
 
-  module.exports = messages;
+  module.exports = users;

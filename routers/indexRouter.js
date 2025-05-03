@@ -1,25 +1,25 @@
 const {Router} = require("express");
 const indexRouter = Router();
-const messages = require("../data/db")
+const users = require("../data/db")
 
 
   indexRouter.get("/", (req, res) => {
-    res.render("index", { title: "Mini Messageboard" ,messages : messages });
-    console.log(messages)
+    res.render("index", { title: "Mini userboard" ,users : users });
+    console.log(users)
   });
 
   indexRouter.get("/new", (req, res) => {
-    res.render("form", { title: "add new message" ,messages : messages });
+    res.render("form", { title: "add new user" ,users : users });
   });
 
-  indexRouter.get("/:messageId", (req, res) => {
-    const message = messages.find(msg => msg.messageId === req.params.messageId);
+  indexRouter.get("/:userId", (req, res) => {
+    const user = users.find(user => user.userId === req.params.userId);
 
-  if (!message) {
-    return res.status(404).send("Message not found");
+  if (!user) {
+    return res.status(404).send("user not found");
   }
 
-  res.render("message", { title: "Message Detail", message });
+  res.render("userDetail", { title: "user Detail", user });
   });
 
 

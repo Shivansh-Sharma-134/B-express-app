@@ -6,16 +6,16 @@
     <title><%= title%></title>
 </head>
 <body>
-    <%messages.forEach((message)=>{%>
+    <%users.forEach((user)=>{%>
     <ul>
-        <li>User: <%= message.user %></li>
-        <li>Text: <%= message.text %></li>
-        <li>Date Added: <%= message.added %></li>
-        <a href="/<%= message.messageId%>">
+        <li>First name= user.firstName %></li>
+        <li>Second name: <%= user.secondName %></li>
+        <li>Date Added: <%= user.added %></li>
+        <a href="/<%= user.userId%>">
             <button>open</button>
         </a>
     </ul>
     <%})%>
-    <a href="/new">add new book</a>
+    <a href="/new">add new user</a>
 </body>
 </html>
