@@ -16,12 +16,20 @@ async function createUsernamePost(req, res) {
           old: req.body 
         });
       }
-  const { nameInput } = req.body;
-  await db.insertUsername(nameInput);
+  const { nameInput,emailInput,ageInput,bioInput } = req.body;
+  await db.insertUser(nameInput, emailInput, ageInput, bioInput);
   res.redirect("/");
 }
 
+async function deleteUser(req, res){
+    const id = req.params.userId;
+
+  await db.deleteUser(id);
+  res.redirect("/");
+  };
+
 module.exports = {
   getUsernames,
-  createUsernamePost
+  createUsernamePost,
+  deleteUser
 };

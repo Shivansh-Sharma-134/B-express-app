@@ -9,7 +9,11 @@
     <%usernames.forEach((user)=>{%>
     <ul>
         <li>Username= <%= user.username %></li>
+        <li>Age= <%= user.age %></li>
+        <li>Email= <%= user.email %></li>
+        <li>Bio= <%= user.bio %></li>
     </ul>
+    <a href="/delete/<%= user.id%>">Delete User</a>
     <%})%>
     <a href="/new">add new user</a>
 </body>
