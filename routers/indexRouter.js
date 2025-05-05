@@ -1,15 +1,12 @@
 const {Router} = require("express");
 const indexRouter = Router();
-const users = require("../data/db")
+const indexController = require("../controllers/indexController");
 
 
-  indexRouter.get("/", (req, res) => {
-    res.render("index", { title: "Mini userboard" ,users : users });
-    console.log(users)
-  });
+  indexRouter.get("/", indexController.getUsernames);
 
   indexRouter.get("/new", (req, res) => {
-    res.render("form", { title: "add new user" ,users : users });
+    res.render("form", { title: "add new user" });
   });
 
   indexRouter.get("/:userId", (req, res) => {

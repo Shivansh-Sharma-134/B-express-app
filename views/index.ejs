@@ -6,14 +6,9 @@
     <title><%= title%></title>
 </head>
 <body>
-    <%users.forEach((user)=>{%>
+    <%usernames.forEach((user)=>{%>
     <ul>
-        <li>First name= <%= user.firstName %></li>
-        <li>Second name: <%= user.lastName %></li>
-        <li>Date Added: <%= user.added %></li>
-        <a href="/<%= user.userId%>">
-            <button>open</button>
-        </a>
+        <li>Username= <%= user.username %></li>
     </ul>
     <%})%>
     <a href="/new">add new user</a>
